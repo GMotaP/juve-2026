@@ -33,10 +33,10 @@ a:hover{color:var(--magenta)}
 .legend{display:flex;justify-content:center;gap:12px;margin:18px 0 6px;flex-wrap:wrap}
 
 /* badges */
-.badge{display:inline-flex;align-items:center;border:3px solid var(--ink);border-radius:999px;padding:5px 16px;font-family:var(--marker);font-size:14px}
+.badge{display:inline-flex;align-items:center;border:3px solid var(--ink);border-radius:999px;padding:5px 16px;font-family:var(--marker);font-size:14px;overflow-wrap:anywhere;max-width:100%}
 .badge--pdv{background:var(--cyan)}
 .badge--promoter{background:var(--magenta);color:#fff}
-.badge--sm{border-width:2.5px;padding:3px 12px;font-size:12px}
+.badge--sm{border-width:3px;padding:6px 16px;font-size:15px}
 .badge--mg{border-width:2px;padding:1px 9px;font-size:11px}
 
 /* títulos de seção */
@@ -51,7 +51,7 @@ a:hover{color:var(--magenta)}
 .grid--tight{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:28px}
 .card{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:18px;box-shadow:7px 7px 0 var(--c,var(--cyan));display:flex;flex-direction:column;gap:10px}
 .card__head{display:flex;align-items:center;gap:14px}
-.card__head>div:last-child{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.card__head>div:last-child{display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:0}
 .card__logo,.card__photo{width:72px;height:72px;flex:0 0 auto;border:3px solid var(--ink);overflow:hidden}
 .card__logo{border-radius:16px}
 .card__photo{border-radius:50%}
@@ -109,10 +109,15 @@ a:hover{color:var(--magenta)}
 
 /* telas pequenas */
 @media (max-width:560px){
-  .grid,.grid--tight{grid-template-columns:1fr}
+  .grid,.grid--tight{grid-template-columns:1fr;gap:14px}
   .section-title--right{text-align:left}
-  .card{box-shadow:5px 5px 0 var(--c,var(--cyan))}
+  .card{padding:14px;gap:8px;box-shadow:5px 5px 0 var(--c,var(--cyan))}
   .card:hover{box-shadow:6px 6px 0 var(--c,var(--cyan))}
+  .card__head{gap:10px}
+  .card__logo,.card__photo{width:60px;height:60px}
+  .card__name{font-size:18px}
+  .card__name--lg{font-size:20px}
+  .badge--sm{padding:5px 13px;font-size:13px}
   .tabs{gap:10px}
   .tab{padding:11px 20px}
 }

@@ -125,7 +125,7 @@
       +       '<h3 class="card__name">' + esc(p.nome || 'A confirmar') + '</h3>'
       +     '</div>'
       +   '</div>'
-      +   '<p class="card__meta card__meta--strong">' + esc(preenchido(p.atletica) ? p.atletica : 'Atlética / curso a confirmar') + '</p>'
+      +   (preenchido(p.atletica) ? '<p class="card__meta card__meta--strong">' + esc(p.atletica) + '</p>' : '')
       +   '<div class="card__actions">'
       +     botao('Instagram', linkInstagram(p.instagram))
       +     botao('Comprar no WhatsApp', linkWhats(p.whatsapp, msg), 'btn--lime')
