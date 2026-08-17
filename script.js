@@ -97,38 +97,35 @@
   /* ---------- cards ---------- */
 
   function cardPDV(p, i) {
-    var msg = (JUVE.config.msgIngresso || '') + ' (' + p.nome + ')';
     return ''
       + '<article class="card" style="--c:' + esc(cor(p, i)) + '">'
       +   '<div class="card__head">'
       +     figura('card__logo', p.logo, p.nome)
       +     '<div>'
-      +       '<span class="badge badge--pdv badge--sm">PONTO DE VENDA</span>'
+      +       '<span class="badge badge--pdv badge--sm">' + esc(preenchido(p.cidade) ? p.cidade : 'Cidade a confirmar') + '</span>'
       +       '<h3 class="card__name">' + esc(p.nome) + '</h3>'
       +     '</div>'
       +   '</div>'
       +   '<p class="card__meta">📍 ' + esc(preenchido(p.endereco) ? p.endereco : 'Endereço a confirmar') + '</p>'
       +   '<div class="card__actions">'
       +     botao('Instagram', linkInstagram(p.instagram))
-      +     botao('WhatsApp', linkWhats(p.whatsapp, msg), 'btn--lime')
       +     botao('Como chegar', linkMaps(p), 'btn--cyan')
       +   '</div>'
       + '</article>';
   }
 
   function cardPromoter(p, i) {
-    var linha = [p.atletica, p.cidade].filter(preenchido).join(' • ');
     var msg = (JUVE.config.msgIngresso || '') + (preenchido(p.nome) ? ' (' + p.nome + ')' : '');
     return ''
       + '<article class="card" style="--c:' + esc(cor(p, i + 1)) + '">'
       +   '<div class="card__head">'
       +     figura('card__photo', p.foto, p.nome)
       +     '<div>'
-      +       '<span class="badge badge--promoter badge--sm">PROMOTER</span>'
+      +       '<span class="badge badge--promoter badge--sm">' + esc(preenchido(p.cidade) ? p.cidade : 'Cidade a confirmar') + '</span>'
       +       '<h3 class="card__name">' + esc(p.nome || 'A confirmar') + '</h3>'
       +     '</div>'
       +   '</div>'
-      +   '<p class="card__meta card__meta--strong">' + esc(linha || 'Atlética / curso • Cidade a confirmar') + '</p>'
+      +   '<p class="card__meta card__meta--strong">' + esc(preenchido(p.atletica) ? p.atletica : 'Atlética / curso a confirmar') + '</p>'
       +   '<div class="card__actions">'
       +     botao('Instagram', linkInstagram(p.instagram))
       +     botao('Comprar no WhatsApp', linkWhats(p.whatsapp, msg), 'btn--lime')
