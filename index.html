@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JUVE 2026 — PDVs e Excursões</title>
+<meta name="description" content="Onde comprar seu ingresso para os Jogos Universitários do Vale da Eletrônica 2026 — pontos de venda, promoters e excursões. 18 e 19 de setembro, Bloco do Urso.">
+<meta name="theme-color" content="#131313">
+
+<!-- Compartilhamento (WhatsApp, Instagram, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="JUVE 2026 — PDVs e Excursões">
+<meta property="og:description" content="Garanta seu ingresso: pontos de venda oficiais, promoters credenciados e excursões da sua cidade.">
+<meta property="og:image" content="img/juve-logo-mascote.png">
+
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Baloo+2:wght@500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- HERO -->
+<header class="hero">
+  <img class="hero__logo" src="img/juve-logo-mascote.png" alt="JUVE 2026" width="340" height="340">
+  <p class="hero__title">JOGOS UNIVERSITÁRIOS<br>DO VALE DA ELETRÔNICA</p>
+  <div class="hero__date">18 e 19 de setembro • Bloco do Urso</div>
+</header>
+
+<!-- ABAS -->
+<nav class="tabs" role="tablist" aria-label="Seções">
+  <button class="tab is-active" data-tab="vendas" role="tab" id="tab-vendas"
+          aria-controls="panel-vendas" aria-selected="true">ONDE COMPRAR</button>
+  <button class="tab" data-tab="excursoes" role="tab" id="tab-excursoes"
+          aria-controls="panel-excursoes" aria-selected="false" tabindex="-1">EXCURSÕES</button>
+</nav>
+
+<div id="conteudo">
+
+  <!-- VENDAS -->
+  <main class="panel" id="panel-vendas" role="tabpanel" aria-labelledby="tab-vendas" tabindex="-1">
+    <p class="lead">Garanta seu ingresso com um dos pontos de venda oficiais ou direto com um promoter credenciado.</p>
+
+    <div class="legend">
+      <span class="badge badge--pdv">PONTO DE VENDA</span>
+      <span class="badge badge--promoter">PROMOTER</span>
+    </div>
+
+    <h2 class="section-title"><span class="hl hl--lime">PONTOS DE VENDA</span></h2>
+    <div class="grid" id="grid-pdvs"><!-- gerado por script.js a partir de data.js --></div>
+
+    <h2 class="section-title section-title--right"><span class="hl hl--magenta">PROMOTERS</span></h2>
+    <div class="grid" id="grid-promoters"><!-- gerado por script.js a partir de data.js --></div>
+  </main>
+
+  <!-- EXCURSÕES -->
+  <main class="panel is-hidden" id="panel-excursoes" role="tabpanel" aria-labelledby="tab-excursoes" tabindex="-1">
+    <img class="panel__art" src="img/excursoes.png" alt="Excursões" width="300" height="150">
+    <p class="lead">Saindo da sua cidade direto pro Bloco do Urso. Fale com o responsável da excursão mais perto de você.</p>
+    <div class="grid grid--tight" id="grid-excursoes"><!-- gerado por script.js a partir de data.js --></div>
+  </main>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="img/juve-logo.png" alt="JUVE 2026" width="170" height="85">
+  <p>18 e 19 de setembro de 2026 • Bloco do Urso</p>
+  <a href="https://www.instagram.com/ojuveoficial/" target="_blank" rel="noopener">@ojuveoficial</a>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
