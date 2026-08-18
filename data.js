@@ -25,7 +25,7 @@ const JUVE = {
     instagramOficial: 'ojuveoficial',
 
     // Mensagem que já vem digitada quando a pessoa abre o WhatsApp.
-    msgIngresso: 'Olá! Vim pelo site do JUVE 2026 e quero comprar meu ingresso.',
+    msgIngresso: 'Olá! Gostaria de mais informações sobre o Juve 2026!',
     msgExcursao: 'Olá! Vim pelo site do JUVE 2026 e quero saber sobre a excursão de {cidade}.'
   },
 
@@ -89,7 +89,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Delfim Moreira',
       instagram: 'siqueiranaju_',
-      whatsapp: ''
+      whatsapp: '+55 35 99979-0192'
     },
     {
       nome: 'Anna Gabriella Mendes',
@@ -97,7 +97,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Pouso Alegre',
       instagram: 'okaygabriella',
-      whatsapp: ''
+      whatsapp: '+55 35 99830-9858'
     },
     {
       nome: 'Clara Duarte',
@@ -105,7 +105,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Itajubá',
       instagram: 'clara__duarte',
-      whatsapp: ''
+      whatsapp: '+55 35 99820-3103'
     },
     {
       nome: 'Debora Aline',
@@ -113,7 +113,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Conceição dos Ouros',
       instagram: 'debssantos1',
-      whatsapp: ''
+      whatsapp: '+55 35 99896-2318'
     },
     {
       nome: 'Gabriel Castro',
@@ -121,7 +121,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Santa Rita do Sapucaí',
       instagram: 'gabriel.castro14',
-      whatsapp: ''
+      whatsapp: '+55 35 99875-8947'
     },
     {
       nome: 'Giovanna Lissy',
@@ -129,7 +129,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Santa Rita do Sapucaí',
       instagram: 'giolissy',
-      whatsapp: ''
+      whatsapp: '+55 35 99190-1019'
     },
     {
       nome: 'Heitor Cardoso',
@@ -137,7 +137,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Santa Rita do Sapucaí',
       instagram: 'heitor_csantos',
-      whatsapp: ''
+      whatsapp: '+55 35 99909-4996'
     },
     {
       nome: 'Isis Costa',
@@ -145,7 +145,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Santa Rita do Sapucaí',
       instagram: '_isiscosta',
-      whatsapp: ''
+      whatsapp: '+55 35 99881-1865'
     },
     {
       nome: 'Laryssa Rennó',
@@ -153,7 +153,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Inconfidentes',
       instagram: 'layssa_rdn',
-      whatsapp: ''
+      whatsapp: '+55 35 99955-7394'
     },
     {
       nome: 'Maria Carolina Faria',
@@ -161,7 +161,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Cachoeira de Minas',
       instagram: '_carolfaria07',
-      whatsapp: ''
+      whatsapp: '+55 35 99781-3063'
     },
     {
       nome: 'Maria Eduarda Vilela',
@@ -169,7 +169,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Santa Rita do Sapucaí',
       instagram: 'duddafer',
-      whatsapp: ''
+      whatsapp: '+55 35 99915-0061'
     },
     {
       nome: 'Maria Olívia Gâmbaro',
@@ -177,7 +177,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Poços de Caldas',
       instagram: 'mah.gambaro',
-      whatsapp: ''
+      whatsapp: '+55 35 99828-9710'
     },
     {
       nome: 'Mariana Rosa',
@@ -185,7 +185,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Pouso Alegre / Santa Rita do Sapucaí',
       instagram: 'mariana_r0saa',
-      whatsapp: ''
+      whatsapp: '+55 35 99890-7114'
     },
     {
       nome: 'Thiago Vinny',
@@ -193,7 +193,7 @@ const JUVE = {
       atletica: '',
       cidade: 'Itajubá / Santa Rita',
       instagram: 'thiago.hocampos',
-      whatsapp: ''
+      whatsapp: '+55 35 98468-1614'
     }
   ],
 
