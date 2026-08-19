@@ -188,8 +188,8 @@ const JUVE = {
       whatsapp: '+55 35 99890-7114'
     },
     {
-      nome: 'Thiago Vinny',
-      foto: 'img/promoter-thiago-vinny.jpeg',
+      nome: 'Thiago Campos',
+      foto: 'img/promoter-thiago-campos.jpeg',
       atletica: '',
       cidade: 'Itajubá / Santa Rita',
       instagram: 'thiago.hocampos',
