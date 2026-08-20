@@ -113,13 +113,15 @@ a:hover{color:var(--magenta)}
 .skip-link{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;z-index:10;font-weight:800}
 .skip-link:focus{left:0;color:#fff}
 
-/* celular: 1 coluna — 2 colunas nesse tamanho de tela espremia
-   demais foto, nome e botões (texto quebrando em 3 linhas dentro
-   de um card de ~140px). Melhor UX é 1 card por linha, largo o
-   suficiente pra ler e tocar nos botões sem esforço. */
+/* celular: PDVs e promoters viram 1 coluna — nesses cards a foto
+   grande + nome + dois botões não cabem em 2 colunas sem espremer
+   (texto quebrando em 3 linhas, foto minúscula). Excursões (grid--tight)
+   não têm foto e o card é mais simples, então continuam em 2 colunas. */
 @media (max-width:640px){
-  .grid,.grid--tight{grid-template-columns:1fr;gap:14px}
+  .grid{grid-template-columns:1fr;gap:14px}
+  .grid--tight{grid-template-columns:repeat(2,1fr);gap:10px}
   .grid > :last-child:nth-child(odd){max-width:100%}
+  .grid--tight > :last-child:nth-child(odd){max-width:calc(50% - 5px)}
   .section-title--right{text-align:left}
   .card{padding:16px;gap:10px}
   .card__head{gap:12px}
@@ -130,14 +132,25 @@ a:hover{color:var(--magenta)}
   .badge--sm{padding:6px 15px;font-size:14px}
   .tabs{gap:10px}
   .tab{padding:11px 20px}
+
+  /* cards de excursão em 2 colunas: um pouco mais compactos */
+  .grid--tight .card{padding:12px;gap:6px}
+  .grid--tight .card__name--lg{font-size:16px}
+  .grid--tight .card__meta{font-size:12px}
+  .grid--tight .badge--mg{font-size:10px;padding:1px 8px}
+  .grid--tight .btn{padding:6px 12px;font-size:12px}
 }
 
-/* celular bem pequeno: só reduz o essencial, sem voltar pra 2 colunas */
+/* celular bem pequeno: só reduz o essencial */
 @media (max-width:360px){
   .card{padding:13px}
   .card__logo,.card__photo{width:54px;height:54px}
   .card__name{font-size:16px}
   .card__name--lg{font-size:18px}
+
+  .grid--tight .card{padding:10px}
+  .grid--tight .card__name--lg{font-size:14px}
+  .grid--tight .card__meta{font-size:11px}
 }
 
 @media (prefers-reduced-motion:reduce){
