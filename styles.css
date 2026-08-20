@@ -83,11 +83,17 @@ a:hover{color:var(--magenta)}
 .card--soon a{color:var(--magenta);font-weight:800}
 
 /* footer */
-.footer{background:var(--ink);color:#fff;padding:34px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-.footer img{width:170px;height:auto}
-.footer p{margin:0;font-weight:700;font-size:15px;color:#bbb}
-.footer a{color:var(--lime);font-family:var(--marker);font-size:17px}
-.footer a:hover{color:var(--magenta)}
+.footer{background:var(--ink);color:#fff;padding:36px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.footer__logo{width:170px;height:auto;margin-bottom:6px}
+.footer__label{margin:14px 0 0;font-family:var(--display);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#8a8a8a}
+.footer__links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.footer__link{color:var(--lime);font-family:var(--marker);font-size:17px}
+.footer__link:hover{color:var(--magenta)}
+.footer__social{display:flex;gap:12px;margin-top:2px}
+.footer__icon{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--ink);border:2.5px solid var(--ink);transition:background .15s,color .15s,transform .15s}
+.footer__icon:hover{background:var(--magenta);color:#fff;transform:translateY(-2px)}
+.footer__divider{width:min(360px,90%);border:none;border-top:1px solid #333;margin:22px 0 4px}
+.footer__bottom{margin:0;font-weight:700;font-size:13px;letter-spacing:.4px;color:#8a8a8a}
 
 /* =========================================================
    ACRÉSCIMOS (estados que o rascunho ainda não tinha)
@@ -138,7 +144,9 @@ a:hover{color:var(--magenta)}
   .grid--tight .card__name--lg{font-size:16px}
   .grid--tight .card__meta{font-size:12px}
   .grid--tight .badge--mg{font-size:10px;padding:1px 8px}
-  .grid--tight .btn{padding:6px 12px;font-size:12px}
+  /* botão ocupa a largura toda do card pra caber "Chamar no WhatsApp" numa linha só */
+  .grid--tight .card__actions{display:block}
+  .grid--tight .btn{display:block;width:100%;padding:8px 4px;font-size:11px;letter-spacing:-.2px;white-space:nowrap;text-align:center;box-sizing:border-box}
 }
 
 /* celular bem pequeno: só reduz o essencial */
@@ -151,6 +159,7 @@ a:hover{color:var(--magenta)}
   .grid--tight .card{padding:10px}
   .grid--tight .card__name--lg{font-size:14px}
   .grid--tight .card__meta{font-size:11px}
+  .grid--tight .btn{padding:7px 2px;font-size:10px}
 }
 
 @media (prefers-reduced-motion:reduce){
