@@ -196,7 +196,7 @@ const JUVE = {
       nome: 'Mariana Rosa',
       foto: 'img/promoter-mariana-rosa.jpeg',
       atletica: '',
-      cidade: 'Pouso Alegre / Santa Rita do Sapucaí',
+      cidade: 'Pouso Alegre / Santa Rita',
       instagram: 'mariana_r0saa',
       whatsapp: '+55 35 99890-7114'
     },
