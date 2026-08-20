@@ -114,7 +114,9 @@
       +   '<p class="card__meta">📍 ' + esc(preenchido(p.endereco) ? p.endereco : 'Endereço a confirmar') + '</p>'
       +   '<div class="card__actions">'
       +     botao('Instagram', linkInstagram(p.instagram))
-      +     botao('Como chegar', linkMaps(p), 'btn--cyan')
+      +     (preenchido(p.whatsapp)
+             ? botao('Contato', linkWhats(p.whatsapp), 'btn--cyan')
+             : botao('Como chegar', linkMaps(p), 'btn--cyan'))
       +   '</div>'
       + '</article>';
   }

@@ -50,9 +50,11 @@ a:hover{color:var(--magenta)}
 .hl--lime{background:linear-gradient(104deg,transparent 4%,var(--lime) 6%,var(--lime) 94%,transparent 96%)}
 .hl--magenta{background:linear-gradient(104deg,transparent 4%,var(--magenta) 6%,var(--magenta) 94%,transparent 96%);color:#fff}
 
-/* grids e cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:18px}
-.grid--tight{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:28px}
+/* grids e cards — sempre 2 colunas; se sobrar 1 card sozinho na
+   última linha, ele ocupa a linha toda e fica centralizado */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:18px}
+.grid--tight{margin-top:28px}
+.grid > :last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc(50% - 10px)}
 .card{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:18px;box-shadow:7px 7px 0 var(--c,var(--cyan));display:flex;flex-direction:column;gap:10px}
 .card__head{display:flex;align-items:center;gap:14px}
 .card__head>div:last-child{display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:0}
@@ -111,19 +113,30 @@ a:hover{color:var(--magenta)}
 .skip-link{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;z-index:10;font-weight:800}
 .skip-link:focus{left:0;color:#fff}
 
-/* telas pequenas */
+/* telas pequenas — continua em 2 colunas */
 @media (max-width:560px){
-  .grid,.grid--tight{grid-template-columns:1fr;gap:14px}
+  .grid,.grid--tight{gap:10px}
+  .grid > :last-child:nth-child(odd){max-width:calc(50% - 5px)}
   .section-title--right{text-align:left}
-  .card{padding:14px;gap:8px;box-shadow:5px 5px 0 var(--c,var(--cyan))}
-  .card:hover{box-shadow:6px 6px 0 var(--c,var(--cyan))}
-  .card__head{gap:10px}
-  .card__logo,.card__photo{width:60px;height:60px}
-  .card__name{font-size:18px}
-  .card__name--lg{font-size:20px}
-  .badge--sm{padding:5px 13px;font-size:13px}
+  .card{padding:10px;gap:6px;box-shadow:4px 4px 0 var(--c,var(--cyan))}
+  .card:hover{box-shadow:5px 5px 0 var(--c,var(--cyan))}
+  .card__head{gap:8px;flex-wrap:wrap}
+  .card__logo,.card__photo{width:44px;height:44px}
+  .card__name{font-size:14px}
+  .card__name--lg{font-size:16px}
+  .card__meta{font-size:12px}
+  .badge{font-size:11px;padding:4px 10px}
+  .badge--sm{padding:4px 10px;font-size:12px}
+  .btn{padding:5px 10px;font-size:12px}
   .tabs{gap:10px}
   .tab{padding:11px 20px}
+}
+
+@media (max-width:400px){
+  .card__logo,.card__photo{width:38px;height:38px}
+  .card__name{font-size:12.5px}
+  .card__name--lg{font-size:14px}
+  .card__meta{font-size:11px}
 }
 
 @media (prefers-reduced-motion:reduce){

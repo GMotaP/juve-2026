@@ -77,6 +77,17 @@ const JUVE = {
       cidade: 'Pouso Alegre',
       instagram: 'p35bar',
       maps: 'https://www.google.com/maps/place/p35+lounge+bar/data=!4m2!3m1!1s0x94cbc7ba99f0d1c9:0xb0aa2283a478ee31?sa=X&ved=1t:242&ictx=111'
+    },
+    {
+      nome: 'TRB',
+      cor: '#2BBEEF',
+      logo: 'img/pdv-trb.jpg',
+      endereco: '',
+      cidade: 'Santa Rita do Sapucaí',
+      instagram: 'trbtorneios',
+      // Sem "maps": o botão vira "Contato" e chama o WhatsApp abaixo
+      // (mesmo número do promoter Gabriel Castro).
+      whatsapp: '+55 35 99875-8947'
     }
   ],
 
