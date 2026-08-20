@@ -8,6 +8,7 @@
   --marker:'Permanent Marker','Comic Sans MS',cursive;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:var(--ink);font-family:'Baloo 2','Trebuchet MS',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 img{max-width:100%}
 a{color:var(--ink);text-decoration:none}
@@ -38,9 +39,12 @@ a:hover{color:var(--magenta)}
 .badge--promoter{background:var(--magenta);color:#fff}
 .badge--sm{border-width:3px;padding:6px 16px;font-size:15px}
 .badge--mg{border-width:2px;padding:1px 9px;font-size:11px}
+.legend .badge{cursor:pointer;transition:transform .15s}
+.legend .badge:hover{color:inherit;transform:scale(1.06)}
+.legend .badge--promoter:hover{color:#fff}
 
 /* títulos de seção */
-.section-title{font-family:var(--display);font-size:clamp(26px,6vw,38px);margin:34px 0 4px;transform:rotate(-1deg)}
+.section-title{scroll-margin-top:24px;font-family:var(--display);font-size:clamp(26px,6vw,38px);margin:34px 0 4px;transform:rotate(-1deg)}
 .section-title--right{text-align:right;margin-top:44px}
 .hl{padding:2px 14px;display:inline-block}
 .hl--lime{background:linear-gradient(104deg,transparent 4%,var(--lime) 6%,var(--lime) 94%,transparent 96%)}

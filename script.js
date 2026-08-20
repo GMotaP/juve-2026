@@ -31,6 +31,11 @@
     return (a + b).toUpperCase();
   }
 
+  function primeiroNome(nome) {
+    var partes = String(nome || '').trim().split(/\s+/);
+    return partes[0] || '';
+  }
+
   /* ---------- links ---------- */
 
   function linkInstagram(user) {
@@ -115,7 +120,7 @@
   }
 
   function cardPromoter(p, i) {
-    var msg = (JUVE.config.msgIngresso || '') + (preenchido(p.nome) ? ' (' + p.nome + ')' : '');
+    var msg = (JUVE.config.msgIngresso || '').replace('{nome}', primeiroNome(p.nome));
     return ''
       + '<article class="card" style="--c:' + esc(cor(p, i + 1)) + '">'
       +   '<div class="card__head">'
@@ -144,14 +149,16 @@
   }
 
   function cardExcursao(e, i) {
-    var msg = (JUVE.config.msgExcursao || '').replace('{cidade}', e.cidade || '');
+    var msg = preenchido(e.msg) ? e.msg : (JUVE.config.msgExcursao || '')
+      .replace('{nome}', primeiroNome(e.responsavel))
+      .replace('{cidade}', e.cidade || '');
     return ''
       + '<article class="card" style="--c:' + esc(cor(e, i)) + '">'
       +   '<div class="card__citytop">'
-      +     '<h3 class="card__name card__name--lg">' + esc(e.cidade) + '</h3>'
+      +     '<h3 class="card__name card__name--lg">' + esc(preenchido(e.nome) ? e.nome : e.cidade) + '</h3>'
       +     '<span class="badge badge--mg" style="background:var(--c)">' + esc(e.uf || 'MG') + '</span>'
       +   '</div>'
-      +   '<p class="card__meta card__meta--strong">🚌 ' + esc(preenchido(e.responsavel) ? e.responsavel : 'Responsável a confirmar') + '</p>'
+      +   '<p class="card__meta card__meta--strong">🚌 ' + esc(preenchido(e.nome) ? e.cidade : (preenchido(e.responsavel) ? e.responsavel : 'Responsável a confirmar')) + '</p>'
       +   '<p class="card__meta">Saída: ' + esc(preenchido(e.saida) ? e.saida : 'Ponto de saída a confirmar') + '</p>'
       +   '<div class="card__actions">'
       +     botao('Chamar no WhatsApp', linkWhats(e.whatsapp, msg), 'btn--lime')

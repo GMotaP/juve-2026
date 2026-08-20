@@ -25,8 +25,10 @@ const JUVE = {
     instagramOficial: 'ojuveoficial',
 
     // Mensagem que já vem digitada quando a pessoa abre o WhatsApp.
-    msgIngresso: 'Olá! Gostaria de mais informações sobre o Juve 2026!',
-    msgExcursao: 'Olá! Vim pelo site do JUVE 2026 e quero saber sobre a excursão de {cidade}.'
+    // {nome}   -> primeiro nome do promoter/responsável
+    // {cidade} -> cidade de saída da excursão
+    msgIngresso: 'Olá {nome}! Gostaria de comprar os ingressos do JUVE 2026!',
+    msgExcursao: 'Olá {nome}! Vim pelo site do JUVE e gostaria de saber sobre a excursão saindo de {cidade}, ainda tem vaga?'
   },
 
   /* ---------- PONTOS DE VENDA ---------- */
@@ -197,8 +199,17 @@ const JUVE = {
     }
   ],
 
-  /* ---------- EXCURSÕES ---------- */
+  /* ---------- EXCURSÕES ----------
+     Campo opcional "nome": usado quando a excursão tem um nome próprio
+     (ex.: "Transfer JUVE Oficial"). Se não usar, o card mostra a cidade
+     como título. A cidade continua sendo a que entra na mensagem
+     do WhatsApp e no card, então preencha sempre.
+     Campo opcional "msg": substitui a mensagem padrão do WhatsApp
+     (config.msgExcursao) só para essa excursão. Texto fixo, sem
+     placeholders {nome}/{cidade}.                                  */
   excursoes: [
+    { cidade: 'Santa Rita do Sapucaí', uf: 'MG', nome: 'Transfer JUVE Oficial', responsavel: 'Thiago Campos', whatsapp: '+55 35 98468-1614', saida: 'Brazza Pub',
+      msg: 'Olá Thiago! Vim pelo site e gostaria de saber se ainda tem vaga no busão do JUVE!' },
     { cidade: 'Pouso Alegre',        uf: 'MG', responsavel: 'Sofia Otaviano', whatsapp: '35 9880-3789', saida: '' },
     { cidade: 'Pouso Alegre',        uf: 'MG', responsavel: 'Izabelly Avane', whatsapp: '35 9887-5386', saida: 'Passa por Cambuí / Estiva' },
     { cidade: 'Itajubá',             uf: 'MG', responsavel: 'Guilherme Albino', whatsapp: '35 9983-7603', saida: '' },
@@ -208,7 +219,7 @@ const JUVE = {
     { cidade: 'Paraisópolis',        uf: 'MG', responsavel: 'Gabriel Resende', whatsapp: '32 9995-9308', saida: '' },
     { cidade: 'Cambuí',              uf: 'MG', responsavel: 'Izabelly Avane', whatsapp: '35 9887-5386', saida: '' },
     { cidade: 'Estiva',              uf: 'MG', responsavel: 'Izabelly Avane', whatsapp: '35 9887-5386', saida: '' },
-    { cidade: 'Careaçu',             uf: 'MG', responsavel: '', whatsapp: '', saida: '' },
-    { cidade: 'Bom Repouso',         uf: 'MG', responsavel: '', whatsapp: '', saida: '' }
+    { cidade: 'Careaçu',             uf: 'MG', responsavel: 'Hevelyn Aparecida', whatsapp: '35 99900-5679', saida: '' },
+    { cidade: 'Bom Repouso',         uf: 'MG', responsavel: 'Maria Rita Dos Santos', whatsapp: '35 99739-7146', saida: '' }
   ]
 };
