@@ -82,7 +82,7 @@ const JUVE = {
       nome: 'TRB',
       cor: '#2BBEEF',
       logo: 'img/pdv-trb.jpg',
-      endereco: '',
+      endereco: 'Chame no contato — vamos até você',
       cidade: 'Santa Rita do Sapucaí',
       instagram: 'trbtorneios',
       // Sem "maps": o botão vira "Contato" e chama o WhatsApp abaixo
