@@ -113,6 +113,14 @@ const JUVE = {
       whatsapp: '+55 35 99830-9858'
     },
     {
+      nome: 'Carol Anjos',
+      foto: 'img/promoter-carol-anjos.jpeg',
+      atletica: '',
+      cidade: 'Pedralva',
+      instagram: '',
+      whatsapp: '+55 35 99847-0712'
+    },
+    {
       nome: 'Clara Duarte',
       foto: 'img/promoter-clara-duarte.jpeg',
       atletica: '',
