@@ -94,7 +94,10 @@ const JUVE = {
   /* ---------- PROMOTERS ----------
      Para adicionar um promoter, copie o bloco abaixo e cole
      logo depois, trocando os dados. A foto é opcional: sem foto,
-     o site mostra as iniciais do nome dentro do círculo.        */
+     o site mostra as iniciais do nome dentro do círculo.
+     Campo opcional "fotoPos": ajusta o enquadramento da foto
+     dentro do círculo (ex.: '50% 15%' sobe o recorte, mostrando
+     mais a cabeça e menos o queixo/peito). Padrão é '50% 50%'.   */
   promoters: [
     {
       nome: 'Ana Julia Siqueira',
@@ -115,9 +118,10 @@ const JUVE = {
     {
       nome: 'Carol Anjos',
       foto: 'img/promoter-carol-anjos.jpeg',
+      fotoPos: '50% 15%',
       atletica: '',
       cidade: 'Pedralva',
-      instagram: '',
+      instagram: 'carool_anjoss',
       whatsapp: '+55 35 99847-0712'
     },
     {

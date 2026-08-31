@@ -81,12 +81,15 @@
   }
 
   // <img> que cai para as iniciais do nome se o arquivo não existir.
-  function figura(classe, src, nome) {
+  // "posicao" (opcional) ajusta o enquadramento da foto — ex.: '50% 20%'
+  // para subir o recorte quando o rosto/cabeça fica cortado no círculo.
+  function figura(classe, src, nome, posicao) {
     if (!preenchido(src)) {
       return '<div class="' + classe + '"><span class="fallback">' + esc(iniciais(nome)) + '</span></div>';
     }
+    var estilo = preenchido(posicao) ? ' style="object-position:' + esc(posicao) + '"' : '';
     return '<div class="' + classe + '">'
-         + '<img src="' + esc(src) + '" alt="" loading="lazy" data-iniciais="' + esc(iniciais(nome)) + '">'
+         + '<img src="' + esc(src) + '" alt=""' + estilo + ' loading="lazy" data-iniciais="' + esc(iniciais(nome)) + '">'
          + '</div>';
   }
 
@@ -126,7 +129,7 @@
     return ''
       + '<article class="card" style="--c:' + esc(cor(p, i + 1)) + '">'
       +   '<div class="card__head">'
-      +     figura('card__photo', p.foto, p.nome)
+      +     figura('card__photo', p.foto, p.nome, p.fotoPos)
       +     '<div>'
       +       '<span class="badge badge--promoter badge--sm">' + esc(preenchido(p.cidade) ? p.cidade : 'Cidade a confirmar') + '</span>'
       +       '<h3 class="card__name">' + esc(p.nome || 'A confirmar') + '</h3>'
