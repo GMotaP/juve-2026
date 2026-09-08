@@ -234,6 +234,7 @@ const JUVE = {
     { cidade: 'Santa Rita do Sapucaí', uf: 'MG', nome: 'Transfer JUVE Oficial', responsavel: 'Thiago Campos', whatsapp: '+55 35 98468-1614', saida: 'Brazza Pub',
       msg: 'Olá Thiago! Vim pelo site e gostaria de saber se ainda tem vaga no busão do JUVE!' },
     { cidade: 'Pouso Alegre',        uf: 'MG', responsavel: 'Sofia Otaviano', whatsapp: '35 9880-3789', saida: '' },
+    { cidade: 'Pouso Alegre',        uf: 'MG', responsavel: 'Isabela Beraldo', whatsapp: '35 99960-9258', saida: '' },
     { cidade: 'Pouso Alegre',        uf: 'MG', responsavel: 'Izabelly Avane', whatsapp: '35 9887-5386', saida: 'Passa por Cambuí / Estiva' },
     { cidade: 'Itajubá',             uf: 'MG', responsavel: 'Guilherme Albino', whatsapp: '35 9983-7603', saida: '' },
     { cidade: 'Piranguinho',         uf: 'MG', responsavel: 'Guilherme Albino', whatsapp: '35 9983-7603', saida: '' },
