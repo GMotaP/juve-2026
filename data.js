@@ -245,6 +245,7 @@ const JUVE = {
     { cidade: 'Estiva',              uf: 'MG', responsavel: 'Izabelly Avane', whatsapp: '35 9887-5386', saida: '' },
     { cidade: 'Careaçu',             uf: 'MG', responsavel: 'Hevelyn Aparecida', whatsapp: '35 99900-5679', saida: '' },
     { cidade: 'Bom Repouso',         uf: 'MG', responsavel: 'Maria Rita Dos Santos', whatsapp: '35 99739-7146', saida: '' },
-    { cidade: 'São Lourenço',        uf: 'MG', responsavel: 'Enrico Fernandes Araruna', whatsapp: '35 9155-5233', saida: '' }
+    { cidade: 'São Lourenço',        uf: 'MG', responsavel: 'Enrico Fernandes Araruna', whatsapp: '35 9155-5233', saida: '' },
+    { cidade: 'Cristina',            uf: 'MG', responsavel: 'Livia Barbosa', whatsapp: '35 99835-9040', saida: '' }
   ]
 };
