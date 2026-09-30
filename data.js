@@ -11,7 +11,7 @@
    • instagram         -> só o usuário, sem o @. Ex.: 'ojuveoficial'
    • cor               -> opcional. Se deixar de fora, o site escolhe
                           uma cor da paleta automaticamente.
-   • Toda linha termina com vírgula. Não esqueça das aspas.
+   • Toda
    ============================================================ */
 
 const JUVE = {
